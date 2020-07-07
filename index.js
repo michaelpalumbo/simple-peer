@@ -6,8 +6,8 @@ var stream = require('readable-stream')
 var queueMicrotask = require('queue-microtask') // TODO: remove when Node 10 is not supported
 
 var MAX_BUFFERED_AMOUNT = 64 * 1024
-var ICECOMPLETE_TIMEOUT = 5 * 1000
-var CHANNEL_CLOSING_TIMEOUT = 5 * 1000
+var ICECOMPLETE_TIMEOUT = 120 * 1000
+var CHANNEL_CLOSING_TIMEOUT = 120 * 1000
 
 // HACK: Filter trickle lines when trickle is disabled #354
 function filterTrickle (sdp) {
